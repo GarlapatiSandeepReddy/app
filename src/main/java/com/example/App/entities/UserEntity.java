@@ -18,29 +18,19 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "users")
 public class UserEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
     
     @Column(name = "firstname")
     private String firstName;
     
     @Column(name = "lastname")
     private String lastName;
-    
+
+    @Id
     @Column(name = "email")
     private String email;
     
     @Column(name = "password")
     private String password;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getFirstName() {
         return firstName;
@@ -76,9 +66,11 @@ public class UserEntity {
 
     @Override
     public String toString() {
-        return "RegisterEntity{" + "id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", password=" + password + '}';
+        return "UserEntity{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
-    
-    
-    
 }
