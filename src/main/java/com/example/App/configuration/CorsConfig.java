@@ -23,7 +23,8 @@ public class CorsConfig {
                 registry.addMapping("/**")
                         .allowedOrigins("http://localhost:3000") // Allow requests from this origin
                         .allowedMethods("GET", "POST", "PUT", "DELETE") // Allowed request methods
-                        .allowedHeaders("*"); // Allowed headers
+                        .allowedHeaders("*");// Allowed headers
+
             }
         };
     }
